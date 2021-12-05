@@ -1,0 +1,14 @@
+.main-content {
+  // max-width: var(--global--main-content-max-width);
+  // min-width: var(--global--main-content-min-width);
+  max-width: var(--global--main-content-max-width);
+  width: calc(
+    100vw - var(--global--margin-space) - var(--global--margin-space) -
+      var(--global--main-content-margin-left)
+  );
+  margin-left: var(--global--main-content-margin-left);
+  position: relative;
+  &--wrap {
+    // margin: auto;
+  }
+}

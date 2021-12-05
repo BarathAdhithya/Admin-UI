@@ -1,0 +1,36 @@
+$base-size: 16;
+
+@function size($target, $context: $base-size) {
+    @return ($target / $context) * 1rem;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// responsive design breakpoints
+
+$mobile: size(320);
+$tab: size(768);
+$desktop: size(1194);
+
+@mixin respond($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin font-styles($size, $weight, $line-height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}

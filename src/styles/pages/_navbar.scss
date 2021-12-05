@@ -1,0 +1,30 @@
+.nav-bar {
+  height: calc(100vh - #{size(60)});
+  background: var(--global--dark-blue-color);
+  box-shadow: size(0) size(14) size(34) rgba(34, 37, 169, 0.4);
+  border-radius: size(20);
+  color: var(--global--light-blue-color);
+  width: var(--global--nav-bar-width);
+  padding: size(40) size(0);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: fixed;
+  * {
+    @include font-styles(
+      var(--global--font-size-sm),
+      var(--global--font-weight-700),
+      var(--global--line-height-sm)
+    );
+  }
+  &::after {
+    position: absolute;
+    bottom: size(-100);
+    content: '';
+    width: size(250);
+    height: size(500);
+    transform: scale(1.1);
+    background: url('../../assets/navbar_curves.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+}

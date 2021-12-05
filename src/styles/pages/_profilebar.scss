@@ -1,0 +1,17 @@
+.profile-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: size(35);
+  width: 100%;
+  &--wrap {
+    position: fixed;
+    max-width: var(--global--main-content-max-width);
+    width: calc(
+      100vw - var(--global--margin-space) - var(--global--margin-space) -
+        var(--global--main-content-margin-left)
+    );
+    margin-left: var(--global--main-content-margin-left);
+    margin-top: var(--global--margin-space);
+    border: size(3) solid red;
+  }
+}

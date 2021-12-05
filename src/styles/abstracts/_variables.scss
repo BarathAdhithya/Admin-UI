@@ -1,0 +1,52 @@
+// COLORS
+html {
+  --global--primary-color: #fff;
+  --global--dark-blue-color: #3d41d7;
+  --global--light-blue-color: #d3d3fd;
+  --global--grey-color: #333;
+  --global--dark-grey-color: #111;
+  --global--light-green: #8f92a1;
+  --global--margin-space: #{size(30)};
+
+  // nav-bar
+  --global--nav-bar-width: #{size(270)};
+  --global--nav-border-size: #{size(4)};
+
+  //profile-bar
+  --global--profile-bar-space-top: #{size(60)};
+  --global--profile-bar-height: #{size(48)};
+
+  //page-content
+  --global--page-content-margin-top: calc(
+    var(--global--profile-bar-space-top) + var(--global--profile-bar-height)
+  );
+
+  //main-content
+  --global--main-content-max-width: calc(
+    #{size(1440)} - var(--global--nav-bar-width)
+  );
+  --global--main-content-min-width: calc(
+    #{size(1140)} - var(--global--margin-space) - var(
+        --global--main-content-margin-right
+      ) - var(--global--nav-bar-width)
+  );
+  --global--main-content-margin-left: calc(
+    var(--global--nav-bar-width) + var(--global--margin-space)
+  );
+  --global--main-content-margin-right: #{size(30)};
+
+  // common font weights
+  --global--font-weight-400: 400;
+  --global--font-weight-500: 500;
+  --global--font-weight-600: 600;
+  --global--font-weight-700: 700;
+  --global--font-weight-800: 800;
+
+  // commong font sizes, margin and padding
+  --global--font-size-sm: #{size(14)};
+  --global--line-height-sm: #{size(24)};
+  @include respond($tab) {
+    --global--font-size-sm: #{size(18)};
+    --global--line-height-sm: #{size(18)};
+  }
+}
